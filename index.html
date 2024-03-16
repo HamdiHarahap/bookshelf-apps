@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Bookshelf Apps</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+	<body>
+		<header class="head_bar">
+			<h1 class="head_bar__title">Bookshelf Apps</h1>
+			<section class="search_section">
+				<form id="searchBook">
+					<input id="searchBookTitle" placeholder="Belajar Web" type="text" aria-label="search input" />
+					<button id="searchSubmit" type="submit">Cari</button>
+				</form>
+			</section>
+		</header>
+		<main>
+			<section class="input_section">
+				<h2>Masukkan Buku Baru</h2>
+				<form id="inputBook">
+					<div class="input">
+						<label for="inputBookTitle">Judul</label>
+						<input id="inputBookTitle" placeholder="Belajar Programan Web" type="text" required />
+					</div>
+					<div class="input">
+						<label for="inputBookAuthor">Penulis</label>
+						<input id="inputBookAuthor" placeholder="Dicoding Academy" type="text" required />
+					</div>
+					<div class="input">
+						<label for="inputBookYear">Tahun</label>
+						<input id="inputBookYear" type="number" required />
+					</div>
+					<div class="input_inline">
+						<label for="inputBookIsComplete">Selesai dibaca</label>
+						<input id="inputBookIsComplete" type="checkbox" />
+					</div>
+					<button id="bookSubmit" type="submit"><span>Masukkan Buku ke rak</span></button>
+				</form>
+			</section>
+
+			<section class="book_shelf">
+				<h2>Belum selesai dibaca</h2>
+
+				<div id="incompleteBookshelfList" class="book_list"></div>
+			</section>
+
+			<section class="book_shelf">
+				<h2>Selesai dibaca</h2>
+
+				<div id="completeBookshelfList" class="book_list"></div>
+			</section>
+		</main>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
